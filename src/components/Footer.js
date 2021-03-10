@@ -38,7 +38,7 @@ export default function Footer() {
 						<div className="flex-1 mb-6 text-black">
 							<a
 								className="text-2xl font-bold text-white no-underline hover:no-underline lg:text-4xl"
-								href="#"
+								href="/"
 							>
 								AYTP
 							</a>
@@ -48,7 +48,7 @@ export default function Footer() {
 							<ul className="mb-6 list-reset">
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
 									<a
-										href="#"
+										href="/"
 										className="no-underline hover:underline hover:text-pink-500"
 									>
 										Facebook
@@ -56,7 +56,7 @@ export default function Footer() {
 								</li>
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
 									<a
-										href="#"
+										href="/"
 										className="no-underline hover:underline hover:text-pink-500"
 									>
 										Linkedin
@@ -64,7 +64,7 @@ export default function Footer() {
 								</li>
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
 									<a
-										href="#"
+										href="/"
 										className="no-underline hover:underline hover:text-pink-500"
 									>
 										Twitter
@@ -77,7 +77,7 @@ export default function Footer() {
 							<ul className="mb-6 list-reset">
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
 									<a
-										href="#"
+										href="/"
 										className="no-underline hover:underline hover:text-pink-500"
 									>
 										Official Blog
@@ -85,7 +85,7 @@ export default function Footer() {
 								</li>
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
 									<a
-										href="#"
+										href="/"
 										className="no-underline hover:underline hover:text-pink-500"
 									>
 										About Us
@@ -93,7 +93,7 @@ export default function Footer() {
 								</li>
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
 									<a
-										href="#"
+										href="/"
 										className="no-underline hover:underline hover:text-pink-500"
 									>
 										Contact

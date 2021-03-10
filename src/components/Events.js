@@ -11,7 +11,7 @@ export default function Events() {
 				<div className="flex flex-col w-full p-6 rounded-lg shadow-md">
 					<div className="flex-1 overflow-hidden bg-white rounded-t">
 						<a
-							href="#"
+							href="/"
 							className="flex flex-wrap no-underline hover:no-underline"
 						>
 							<p className="w-full px-6 text-xs text-gray-600 md:text-sm">
