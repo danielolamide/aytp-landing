@@ -26,7 +26,6 @@ export default function About() {
 						</p>
 					</div>
 					<div className="w-full p-6 sm:w-1/2">
-						{" "}
 						<svg
 							className="w-full mx-auto sm:h-64"
 							viewBox="0 0 1177 598.5"
