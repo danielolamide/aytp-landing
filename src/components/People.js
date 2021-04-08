@@ -13,16 +13,16 @@ export default function People() {
 					<div className="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 gradient"></div>
 				</div>
 				<div class="w-full md:w-1/3 p-6 flex flex-col">
-					<img src={Rosemary} className="w-full" />
+					<img alt="Rosemary"src={Rosemary} className="w-full" />
 				</div>
 				<div class="w-full md:w-1/3 p-6 flex flex-col">
-					<img src={Diana} className="w-full" />
+					<img alt="Diana" src={Diana} className="w-full" />
 				</div>
 				<div class="w-full md:w-1/3 p-6 flex flex-col">
-					<img src={Martin} className="w-full" />
+					<img alt="Martin" src={Martin} className="w-full" />
 				</div>
 				<div class="w-full md:w-1/3 p-6 flex flex-col">
-					<img src={Teddy} className="w-full" />
+					<img alt="Teddy" src={Teddy} className="w-full" />
 				</div>
 			</div>
 		</section>

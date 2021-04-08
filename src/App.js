@@ -3,9 +3,10 @@ import Navbar from "./components/ui/Navbar";
 import About from "./components/About";
 import People from "./components/People";
 import Pricing from "./components/Pricing";
-import Events from "./components/Events";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact"; 
 import Footer from "./components/Footer";
+import EventsSlideShow from './components/Eventsslider';
+
 
 function App() {
 	return (
@@ -15,7 +16,7 @@ function App() {
 			<About />
 			<People />
 			<Pricing />
-			<Events />
+			<EventsSlideShow/>
 			<Contact />
 			<Footer />
 		</div>
