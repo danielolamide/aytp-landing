@@ -11,7 +11,7 @@ export default function Footer() {
     setSocials(data)
   })
   setemailAddress(`mailto:${socialsData["email"]}?subject=Hello`)
-  },[socialsData])
+  },[])
 
 	return (
 		<>
