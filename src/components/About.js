@@ -1,7 +1,7 @@
 import Africa from "../assets/img/africa.png";
 import React, { useEffect, useState } from 'react';
 
-const ABOUT_URL = "http://34.66.0.133:1337/about"
+const ABOUT_URL = "https://34.66.0.133/about"
 
 
 export default function About() {
