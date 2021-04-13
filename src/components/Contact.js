@@ -1,4 +1,14 @@
+import React, { useEffect, useState } from 'react';
+const FOOTER_URL = "http://34.66.0.133:1337/social"
 export default function Contact() {
+	const [emailAddress,setemailAddress] = useState("")
+	useEffect(()=>{
+  	fetch(FOOTER_URL)
+  		.then(response => response.json())
+	  	.then((data)=>{
+	  	setemailAddress(`mailto:${data["email"]}?subject=Hello`)
+	  })
+  	  },[])
 	return (
 		<section className="py-8 bg-gray-100 border-b">
 			<div className="container flex flex-wrap pt-4 pb-12 mx-auto">
@@ -971,7 +981,7 @@ export default function Contact() {
 				</div>
 				<div className="flex justify-center w-full">
 					<a
-						href="mailto:aytpafrica@gmail.com"
+						href={emailAddress}
 						class="mx-auto w-1/2  md:w-1/4 flex justify-center  lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
 					>
 						Email Us
