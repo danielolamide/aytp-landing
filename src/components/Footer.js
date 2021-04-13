@@ -1,4 +1,18 @@
+import React, { useEffect, useState } from 'react';
+
+const FOOTER_URL = "http://34.66.0.133:1337/social"
 export default function Footer() {
+  const [emailAddress,setemailAddress] = useState("")
+  const [socialsData,setSocials] =  useState({})
+  useEffect(()=>{
+  fetch(FOOTER_URL)
+  .then(response => response.json())
+  .then((data)=>{
+    setSocials(data)
+  })
+  setemailAddress(`mailto:${socialsData["email"]}?subject=Hello`)
+  },[socialsData])
+
 	return (
 		<>
 			<svg
@@ -40,7 +54,7 @@ export default function Footer() {
 								className="text-2xl font-bold text-white no-underline hover:no-underline lg:text-4xl"
 								href="/"
 							>
-								AYTP
+             {socialsData["name"]} 
 							</a>
 						</div>
 						<div className="flex-1">
@@ -48,7 +62,7 @@ export default function Footer() {
 							<ul className="mb-6 list-reset">
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
 									<a
-										href="/"
+										href={socialsData["facebook"]}
 										className="no-underline hover:underline hover:text-pink-500"
 									>
 										Facebook
@@ -56,19 +70,16 @@ export default function Footer() {
 								</li>
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
 									<a
-										href="/"
+										href={socialsData["linkedin"]}
 										className="no-underline hover:underline hover:text-pink-500"
 									>
 										Linkedin
 									</a>
 								</li>
 								<li className="inline-block mt-2 mr-2 md:block md:mr-0">
-									<a
-										href="/"
-										className="no-underline hover:underline hover:text-pink-500"
-									>
-										Twitter
-									</a>
+                <a href={emailAddress}>
+                  Email
+                </a>
 								</li>
 							</ul>
 						</div>

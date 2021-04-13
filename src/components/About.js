@@ -1,5 +1,24 @@
 import Africa from "../assets/img/africa.png";
+import React, { useEffect, useState } from 'react';
+
+const ABOUT_URL = "http://34.66.0.133:1337/about"
+
+
 export default function About() {
+	const [aboutData, setAboutData] = useState({
+		"LeftHeaderText": "Left ipsum",
+		"LeftDescription": "ipsum description",
+		"RightHeaderText": "Right ipsum",
+		"RightDescription": "ipsum description",
+	})
+
+	useEffect(() => {
+	fetch(ABOUT_URL)
+		.then(response => response.json())
+		.then((data) => {
+		setAboutData(data)
+		})
+	},[])
 	return (
 		<section className="py-8 bg-white border-b">
 			<div className="container max-w-5xl m-8 mx-auto">
@@ -12,18 +31,13 @@ export default function About() {
 				<div className="flex flex-wrap">
 					<div className="w-5/6 p-6 sm:w-1/2">
 						<h3 className="mb-3 text-3xl font-bold leading-none text-gray-800">
-							Lorem ipsum dolor sit amet
+							{aboutData["LeftHeaderText"]}
 						</h3>
 						<p className="mb-8 text-gray-600">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-							at ipsum eu nunc commodo posuere et sit amet ligula.
+							{aboutData["LeftDescription"]}
 							<br />
 							<br />
-							Images from:
-							<a className="text-pink-500 underline" href="https://undraw.co/">
-								undraw.co
-							</a>
-						</p>
+					</p>
 					</div>
 					<div className="w-full p-6 sm:w-1/2">
 						<svg
@@ -306,18 +320,12 @@ export default function About() {
 					<div className="w-full p-6 mt-6 sm:w-1/2">
 						<div className="align-middle">
 							<h3 className="mb-3 text-3xl font-bold leading-none text-gray-800">
-								Lorem ipsum dolor sit amet
+							{aboutData["RightHeaderText"]}
 							</h3>
 							<p className="mb-8 text-gray-600">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-								at ipsum eu nunc commodo posuere et sit amet ligula.
+								{aboutData["RightDescription"]}	<br />
 								<br />
-								<br />
-								Images from:
-								<a className="text-pink-500 underline" href="https://undraw.co/">
-									undraw.co
-								</a>
-							</p>
+									</p>
 						</div>
 					</div>
 				</div>
