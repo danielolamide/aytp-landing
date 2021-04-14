@@ -3,7 +3,7 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
 
-const EVENTS_URL = "http://34.66.0.133:1337/events"
+const EVENTS_URL = "https://34.66.0.133/events"
 export default function EventsSlideShow() {
   const [titles, setTitles] = useState([])
   useEffect(() => {

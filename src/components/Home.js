@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Hero from "../assets/img/hero.png";
-const HEADER_URL = "http://34.66.0.133:1337/header"
+const HEADER_URL = "https://34.66.0.133/header"
 
 export default function Home() {
 	const [headerData, setHeaderData] = useState({
