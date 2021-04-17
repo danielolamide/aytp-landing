@@ -1,30 +1,35 @@
-import React,{useCallback, useState} from "react";
+import React,{useCallback, useState,useRef} from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 export default function ContactForm() {
-    
+    const captchaRef = useRef();
     const [email,setEmail] = useState("")
     const [phone,setPhone] = useState("")
     const [message,setMessage] = useState("")
     const [isSubscribed,setSubscription] = useState(true)
-
+    const [token,setToken] = useState("")
     const handleSubmit = useCallback((event) =>{
          event.preventDefault();
          console.log(email,phone,message,isSubscribed)
          const headers = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: email,phone:phone,message:message,isSubscribed:isSubscribed })
+            body: JSON.stringify({ email: email,phone:phone,message:message,isSubscribed:isSubscribed,token })
         };
          fetch("https://34.66.0.133/app2/emailform",headers).then(r => r.json()).then((data )=>{
             setEmail("");
             setPhone("");
             setMessage("");
             setSubscription("true");
+            captchaRef.current.reset();
          })
-    },[email,phone,message,isSubscribed])
+    },[email,phone,message,isSubscribed,token])
 
-
+    const captchachange = (value) =>{
+      console.log(value)
+      setToken(value)
+    }
     return (
         <div className="flex items-center justify-center  py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8">
@@ -105,10 +110,12 @@ export default function ContactForm() {
                                 Subscribe to newsletter
               </label>
                         </div>
-
-
                     </div>
-
+                    <ReCAPTCHA
+                    ref={captchaRef}
+                        sitekey="6LcF1q0aAAAAAKUZSaO69XUrnqwAVYess7Kbf6Eu"
+                            onChange={captchachange}
+                              />
                     <div>
                         <button
 
@@ -120,8 +127,6 @@ export default function ContactForm() {
                             </span>
               Send Now
             </button>
-
-
                     </div>
                 </form>
             </div>
