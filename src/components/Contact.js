@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ContactForm from './ContactForm'
 const FOOTER_URL = "https://34.66.0.133/social"
 export default function Contact() {
 	const [emailAddress,setemailAddress] = useState("")
@@ -20,7 +21,9 @@ export default function Contact() {
 				</div>
 			</div>
 			<div className="flex flex-col w-full">
+				<ContactForm />
 				<div className="flex justify-center w-full ">
+								
 					<svg
 						className="w-3/4"
 						id="ae37f038-3a9e-4b82-ad68-fc94ba16af2a"
