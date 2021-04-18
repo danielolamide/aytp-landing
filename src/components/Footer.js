@@ -9,8 +9,8 @@ export default function Footer() {
   .then(response => response.json())
   .then((data)=>{
     setSocials(data)
+  	setemailAddress(`mailto:${data["email"]}?subject=Hello`)
   })
-  setemailAddress(`mailto:${socialsData["email"]}?subject=Hello`)
   },[])
 
 	return (
