@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+import Landing from "./views/Landing";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+	<BrowserRouter>
+  		<Switch>
+			<Route path="/" exact component={Landing} />
+			<Redirect from="*" to="/" />
+  		</Switch>
+	</BrowserRouter>,
   document.getElementById('root')
 );
 

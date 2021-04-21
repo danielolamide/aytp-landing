@@ -1,5 +1,5 @@
 import Home from "./components/Home";
-import Navbar from "./components/ui/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About";
 import People from "./components/People";
 import Pricing from "./components/Pricing";
