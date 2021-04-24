@@ -3,7 +3,7 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
 
-const EVENTS_URL = "https://34.66.0.133/events"
+const EVENTS_URL = "http://34.66.0.133/events"
 export default function EventsSlideShow() {
   const [titles, setTitles] = useState([])
   useEffect(() => {
@@ -14,15 +14,15 @@ export default function EventsSlideShow() {
       })
   },[])
   return (
-    <div className="slide-container">
+    <div className="slide-container h-full">
 
-      <Slide>
+	<Slide>
          {titles.map((value, index) => {
           return <div className="each-slide">
-          <EventsTemplate key={index} name={value.id} title={value.name} url={value.url} description={value.description} />
-        </div>
+			<EventsTemplate  key={index} name={value.id} title={value.name} url={value.url} description={value.description} />
+		  </div>
           })}
-			</Slide>
+	</Slide>
     </div>
   )
 }
@@ -36,7 +36,7 @@ function EventsTemplate(props) {
 
 	return (
     
-		<section className="w-full py-8 bg-white border-b">
+		<section className="w-full h-1/2  py-8 bg-white border-b">
 			<div className="container flex flex-col pt-4 pb-12 mx-auto">
 				<h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
 					{props.title}

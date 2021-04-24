@@ -1,7 +1,6 @@
 import React,{useCallback, useState,useRef} from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 export default function ContactForm() {
     const captchaRef = useRef();
     const [email,setEmail] = useState("")
@@ -17,7 +16,7 @@ export default function ContactForm() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: email,phone:phone,message:message,isSubscribed:isSubscribed,token })
         };
-         fetch("https://34.66.0.133/app2/emailform",headers).then(r => r.json()).then((data )=>{
+         fetch("http://34.66.0.133/app2/emailform",headers).then(r => r.json()).then((data )=>{
             setEmail("");
             setPhone("");
             setMessage("");
@@ -39,7 +38,7 @@ export default function ContactForm() {
             src=""
             alt="Workflow"
           /> */}
-                    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Send us a message</h2>
+                    {/* <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Send us a message</h2> */}
 
                 </div>
                 <form 

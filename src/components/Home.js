@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Hero from "../assets/img/hero.png";
-const HEADER_URL = "https://34.66.0.133/header"
+const HEADER_URL = "http://34.66.0.133/header"
 
 export default function Home() {
 	const [headerData, setHeaderData] = useState({
@@ -20,17 +20,18 @@ export default function Home() {
 		<>
 			<div className="pt-24">
 				<div className="container flex flex-col flex-wrap items-center px-3 mx-auto md:flex-row">
-					<div className="flex flex-col items-start justify-center w-full text-center md:w-2/5 md:text-left">
+					<div className="flex flex-col lg:items-left justify-center w-full text-center md:w-2/5 md:text-left">
 						<p className="w-full uppercase tracking-loose">
+							
 							{headerData["miniHeader"]}
 						</p>
-						<h1 className="my-4 text-5xl font-bold leading-tight">
+						<h1 className="my-4 text-5xl  font-bold leading-tight">
 							{headerData["mainHero"]}
 						</h1>
-						<p className="mb-8 text-2xl leading-normal">
+						<p className="mb-8 text-2xl  leading-normal">
 							{headerData["subHero"]}
 						</p>
-						<button className="px-8 py-4 mx-auto my-6 font-bold text-gray-800 bg-white rounded-full shadow-lg lg:mx-0 hover:underline focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+						<button className="px-8 py-4 w-40 mx-auto my-6 font-bold text-gray-800 bg-white rounded-full shadow-lg lg:mx-0 hover:underline focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
 							Subscribe
 						</button>
 					</div>
