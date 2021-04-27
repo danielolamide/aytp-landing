@@ -45,7 +45,7 @@ export default function Landing() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full md:w-4/12 px-4 text-center">
+                        <div className=" w-full md:w-4/12 px-4 text-center">
                             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                                 <div className="px-4 py-5 flex-auto">
                                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
@@ -112,11 +112,6 @@ export default function Landing() {
                 </div>
             </section>
 			<section className="relative py-20">
-				<div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20" style={{ transform: "translateZ(0)" }}>
-					<svg className="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0" >
-						<polygon className="text-white fill-current" points="2560 0 2560 100 0 100" ></polygon>
-					</svg>
-				</div>
 				<div className="container mx-auto px-4">
 					<div className="items-center flex flex-wrap">
 						<div className="w-full md:w-4/12 ml-auto mr-auto px-4">
@@ -275,24 +270,19 @@ export default function Landing() {
             		</div>
           		</div>
         	</section>
-        	<section className="pb-20 relative block bg-gray-800">
-				<div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20" style={{ transform: "translateZ(0)" }} >
-					<svg className="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-						<polygon className="text-gray-800 fill-current" points="2560 0 2560 100 0 100" ></polygon>
-					</svg>
-				</div>
+        	<section className="pb-20 relative block bg-gray-600">
 				<div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
 					<div className="flex flex-wrap text-center justify-center">
 						<div className="w-full lg:w-6/12 px-4">
 							<h2 className="text-4xl font-semibold text-white"> Contact Us </h2>
-							<p className="text-lg leading-relaxed mt-4 mb-4 pb-10 lg:pb-0 text-gray-400">
+							<p className="text-lg leading-relaxed mt-4 mb-4 pb-10 lg:pb-0 text-white">
 								"Don't judge each day by the harvest you reap but by the seeds that you plant." -Robert Louis Stevenson
 							</p>
 						</div>
 					</div>
           		</div>
         	</section>
-        	<section className="relative block py-24 lg:pt-0 bg-gray-800">
+        	<section className="relative block py-24 lg:pt-0 bg-gray-600">
 				<div className="container mx-auto px-4">
 					<div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
 						<div className="w-full lg:w-6/12 px-4">

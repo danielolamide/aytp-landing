@@ -9,11 +9,13 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Landing from "./views/Landing";
+import Blog from "./views/Blog";
 
 ReactDOM.render(
 	<BrowserRouter>
   		<Switch>
 			<Route path="/" exact component={Landing} />
+			<Route path="/blog" exact component={Blog} />
 			<Redirect from="*" to="/" />
   		</Switch>
 	</BrowserRouter>,
