@@ -6,7 +6,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import Background from "../assets/img/background.svg"
+import Background from "../assets/img/background.svg";
 
 export default function Landing() {
     return(
