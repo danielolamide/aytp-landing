@@ -7,6 +7,8 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import Background from "../assets/img/background.svg";
+import TeamSlider from '../components/Sliders/TeamSlider';
+import CardItem from '../components/Cards/CardItem';
 
 export default function Landing() {
     return(
@@ -33,45 +35,13 @@ export default function Landing() {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap">
                         <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                                <div className="px-4 py-5 flex-auto">
-                                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                                        <i className="fas fa-award"></i>
-                                    </div>
-                                    <h6 className="text-xl font-semibold text-gray-500 ">Card Item One</h6>
-                                    <p className="mt-2 mb-4 text-gray-500">
-                                        Create online courses and coaching services. Transform your experience and know-how into a thriving knowledge business.
-                                    </p>
-                                </div>
-                            </div>
+                            <CardItem/>
                         </div>
                         <div className=" w-full md:w-4/12 px-4 text-center">
-                            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                                <div className="px-4 py-5 flex-auto">
-                                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-                                        <i className="fa fa-book" aria-hidden="true"></i>
-                                    </div>
-                                    <h6 className="text-xl font-semibold text-gray-500">Card Item Two</h6>
-                                    <p className="mt-2 mb-4 text-gray-500">
-                                        Keep you user engaged by providing meaningful information.
-                                        Remember that by this time, the user is curious.
-                                    </p>
-                                </div>
-                            </div>
+                           <CardItem />
                         </div>
                         <div className="pt-6 w-full md:w-4/12 px-4 text-center">
-                            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-								<div className="px-4 py-5 flex-auto">
-									<div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-yellow-400">
-										<i className="fas fa-lightbulb"></i>
-									</div>
-									<h6 className="text-xl font-semibold text-gray-500">Card Item Three</h6>
-									<p className="mt-2 mb-4 text-gray-500">
-										Write a few lines about each one. A paragraph describing a
-										feature will be enough. Keep you user engaged!
-									</p>
-								</div>
-                            </div>
+                            <CardItem />
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center mt-32">
@@ -176,100 +146,7 @@ export default function Landing() {
 					</div>
 				</div>
 			</section>
-			<section className="pt-20 pb-48">
-				<div className="container mx-auto px-4">
-					<div className="flex flex-wrap justify-center text-center mb-24">
-						<div className="w-full lg:w-6/12 px-4">
-							<h2 className="text-4xl text-gray-500 font-semibold">Our Team</h2>
-							<p className="text-lg leading-relaxed m-4 text-gray-500">
-								"When you reach the end of your rope, tie a knot in it and hang on." -Franklin D. Roosevelt.
-							</p>
-						</div>
-					</div>
-					<div className="flex flex-wrap">
-						<div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-12">
-							<div className="px-10">
-								<img alt="..." src={require("../assets/img/bprofile.svg").default} className="shadow-lg rounded-full mx-auto max-w-px"/>
-								<div className="pt-6 text-center">
-									<h5 className="text-xl font-bold text-gray-500">Ryan Tompson</h5>
-									<p className="mt-1 text-sm text-gray-400  font-semibold"> Web Developer </p>
-									<div className="mt-6">
-										<button className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-											<i className="fab fa-twitter"></i>
-										</button>
-										<button className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-											<i class="fab fa-google" aria-hidden="true"></i>
-										</button>
-										<button className="bg-blue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" >
-											<i class="fab fa-linkedin" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-12">
-							<div className="px-10">
-								<img alt="..." src={require("../assets/img/bprofile.svg").default} className="shadow-lg rounded-full mx-auto max-w-px"/>
-								<div className="pt-6 text-center">
-									<h5 className="text-xl font-bold text-gray-500">Ryan Tompson</h5>
-									<p className="mt-1 text-sm text-gray-400  font-semibold"> Web Developer </p>
-									<div className="mt-6">
-										<button className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-											<i className="fab fa-twitter"></i>
-										</button>
-										<button className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-											<i class="fab fa-google" aria-hidden="true"></i>
-										</button>
-										<button className="bg-blue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" >
-											<i class="fab fa-linkedin" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-12">
-							<div className="px-10">
-								<img alt="..." src={require("../assets/img/bprofile.svg").default} className="shadow-lg rounded-full mx-auto max-w-px"/>
-								<div className="pt-6 text-center">
-									<h5 className="text-xl font-bold text-gray-500">Ryan Tompson</h5>
-									<p className="mt-1 text-sm text-gray-400  font-semibold"> Web Developer </p>
-									<div className="mt-6">
-										<button className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-											<i className="fab fa-twitter"></i>
-										</button>
-										<button className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-											<i class="fab fa-google" aria-hidden="true"></i>
-										</button>
-										<button className="bg-blue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" >
-											<i class="fab fa-linkedin" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-12">
-							<div className="px-10">
-								<img alt="..." src={require("../assets/img/bprofile.svg").default} className="shadow-lg rounded-full mx-auto max-w-px"/>
-								<div className="pt-6 text-center">
-									<h5 className="text-xl font-bold text-gray-500">Ryan Tompson</h5>
-									<p className="mt-1 text-sm text-gray-400  font-semibold"> Web Developer </p>
-									<div className="mt-6">
-										<button className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-											<i className="fab fa-twitter"></i>
-										</button>
-										<button className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-											<i class="fab fa-google" aria-hidden="true"></i>
-										</button>
-										<button className="bg-blue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" >
-											<i class="fab fa-linkedin" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-            		</div>
-          		</div>
-        	</section>
+			<TeamSlider/>
         	<section className="pb-20 relative block bg-gray-600">
 				<div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
 					<div className="flex flex-wrap text-center justify-center">
