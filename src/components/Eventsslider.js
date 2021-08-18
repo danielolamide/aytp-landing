@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Slide } from 'react-slideshow-image';
+import { API_BASE_URL } from '../config';
 import 'react-slideshow-image/dist/styles.css';
 
 
-const EVENTS_URL = "http://34.66.0.133/events"
+const EVENTS_URL = `${API_BASE_URL}/events`
 export default function EventsSlideShow() {
   const [titles, setTitles] = useState([])
   useEffect(() => {
     fetch(EVENTS_URL)
       .then(response => response.json())
       .then((d) => {
+		  console.log(d)
         setTitles(d)
       })
   },[])
@@ -19,7 +21,7 @@ export default function EventsSlideShow() {
 	<Slide>
          {titles.map((value, index) => {
           return <div className="each-slide">
-			<EventsTemplate  key={index} name={value.id} title={value.name} url={value.url} description={value.description} />
+			<EventsTemplate  key={index} name={value.id} title={value.Name} url={value.Url} description={value.Description} />
 		  </div>
           })}
 	</Slide>
