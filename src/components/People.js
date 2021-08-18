@@ -3,11 +3,12 @@
 // import Martin from "../assets/img/MartinMbaya.jpg";
 // import Teddy from "../assets/img/TeddyWaria.png";
 import React, { useEffect, useState } from "react";
-const FOUNDERS_URL = "http://34.66.0.133/teams"
+import { API_BASE_URL } from "../config";
+const FOUNDERS_URL = `${API_BASE_URL}/teams`
 
 
 function Person(props) {
-	let imageUrl = "http://34.66.0.133" + props.source
+	let imageUrl = API_BASE_URL + props.source
 	let stakeHolderName = props.name
 	let currentRole = props.role
 	return (
