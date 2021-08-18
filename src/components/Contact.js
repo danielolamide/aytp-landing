@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ContactForm from './ContactForm'
-const FOOTER_URL = "http://34.66.0.133/social"
+import {API_BASE_URL} from "../config";
+
+const FOOTER_URL = `${API_BASE_URL}/socials`
 export default function Contact() {
 	const [emailAddress,setemailAddress] = useState("")
 	useEffect(()=>{

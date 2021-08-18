@@ -1,10 +1,12 @@
 import Africa from "../assets/img/africa.png";
+import {API_BASE_URL} from "../config";
 import React, { useEffect, useState } from 'react';
 
-const ABOUT_URL = "http://34.66.0.133/about"
+
+const ABOUT_URL = `${API_BASE_URL}/about-us`
 
 
-export default function About() {
+export function About() {
 	const [aboutData, setAboutData] = useState({
 		"LeftHeaderText": "Left ipsum",
 		"LeftDescription": "ipsum description",
