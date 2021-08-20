@@ -5,7 +5,7 @@ import People from "./components/People";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact"; 
 import Footer from "./components/Footer";
-import EventsSlideShow from './components/Eventsslider';
+import PublicationsSlider from "./components/Publications";
 
 
 function App() {
@@ -16,7 +16,8 @@ function App() {
 			<About />
 			<People />
 			<Pricing />
-			<EventsSlideShow/>
+			{/* <EventsSlideShow/> */}
+			<PublicationsSlider />
 			<Contact />
 			<Footer />
 		</div>
