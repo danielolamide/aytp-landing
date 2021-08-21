@@ -12,7 +12,7 @@ function Person(props) {
   let currentRole = props.role;
   return (
     <>
-      <div class="w-full md:w-1/4 p-3 flex flex-strech">
+      <div className="w-full md:w-1/4 p-3 flex flex-strech">
         <div className="flex flex-col flex-strech w-full h-full">
           <img alt="Rosemary" src={imageUrl} className="w-full h-4/5" />
           <p className="text-black text-2xl font-bold text-center my-4">

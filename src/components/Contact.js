@@ -987,7 +987,7 @@ export default function Contact() {
 				<div className="flex justify-center w-full">
 					<a
 						href={emailAddress}
-						class="mx-auto w-1/2  md:w-1/4 flex justify-center  lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+						className="mx-auto w-1/2  md:w-1/4 flex justify-center  lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
 					>
 						Email Us
 					</a>
