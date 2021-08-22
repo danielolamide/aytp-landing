@@ -35,7 +35,7 @@ export function PatnersSection() {
     gap: "1rem 1.9rem",
     "grid-template-columns ": "repeat(2, minmax(0, 50%))",
   };
-  let patnerStlye = {
+  let partnerStlye = {
     " list-style": "none",
     " box-sizing": "border-box",
     " align-items": "center",
@@ -46,52 +46,52 @@ export function PatnersSection() {
   };
   return (
     <>
-    <h1 className="bg-white w-full text-4xl font-bold pt-10 underline leading-tight text-center text-gray-800">
-          Our Patners
-    </h1>
-    <div
-      className="slide-container bg-white text-black h-full "
-      style={outerStyle}
-    >
-      <ul style={gridStyle}>
-        {patners.map((value, index) => {
-          let url = `${API_BASE_URL}${value.PartnerLogo.url}`;
-          return (
-            <>
-              <li className="each-slide" style={patnerStlye}>
-                <PatnerCard
-                  key={index}
-                  id={value.id}
-                  name={value.PartnerName}
-                  url={value.PartnerURL}
-                  logo={url}
-                />
-              </li>
-            </>
-          );
-        })}
-      </ul>
-    </div>
+      <h1 className="bg-white w-full text-4xl font-bold pt-10 underline leading-tight text-center text-gray-800">
+        Our Patners
+      </h1>
+      <div
+        className="slide-container bg-white text-black h-full "
+        style={outerStyle}
+      >
+        <ul style={gridStyle}>
+          {patners.map((value, index) => {
+            let url = `${API_BASE_URL}${value.PartnerLogo.url}`;
+            return (
+              <>
+                <li className="each-slide" style={partnerStlye}>
+                  <PartnerCard
+                    key={index}
+                    id={value.id}
+                    name={value.PartnerName}
+                    url={value.PartnerURL}
+                    logo={url}
+                  />
+                </li>
+              </>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 }
 
-function PatnerCard(props) {
+function PartnerCard(props) {
   function handleClick(e) {
     e.preventDefault();
     window.open(props.url, "_blank");
-    console.log("Patner link was clicked.");
+    console.log("Partner link was clicked.");
   }
 
   return (
-    <>
+    <div onClick={handleClick}>
       <img
         height="100%"
         width="100%"
-        onclick={handleClick}
         src={props.logo}
         alt={props.name}
       />
-    </>
+      <p className="text-center">{props.name}</p>
+    </div>
   );
 }
