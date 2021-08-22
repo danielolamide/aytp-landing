@@ -36,7 +36,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex justify-center w-full py-6 md:w-3/5">
-            <img className="z-50 w-full md:w-4/5" src={Hero} alt="Hero" />
+            <img className="z-10 w-full md:w-4/5" src={Hero} alt="Hero" />
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function Navbar() {
 		})
 	},[])
 	return (
-		<nav className="fixed top-0 z-30 w-full bg-white text-black">
+		<nav className="fixed top-0 bg-opacity-50 z-100 w-full bg-white text-black">
 			<div className="flex w-full p-6">
 				<div>
 					<img src={`${API_BASE_URL}${logoData.Logo.url}`} alt="logo" height="30" width="30"></img>
