@@ -5,8 +5,9 @@ import People from "./components/People";
 import {Pricing} from "./components/Pricing";
 import Contact from "./components/Contact"; 
 import Footer from "./components/Footer";
-import PublicationsSlider from "./components/Publications";
-
+import { EventsSlideShow } from "./components/Eventsslider";
+import {PublicationsSlider} from "./components/Publications";
+import { PatnersSection } from "./components/Patners";
 
 function App() {
 	return (
@@ -16,7 +17,8 @@ function App() {
 			<About />
 			<People />
 			<Pricing />
-			{/* <EventsSlideShow/> */}
+			<PatnersSection />
+			<EventsSlideShow/> 
 			<PublicationsSlider />
 			<Contact />
 			<Footer />

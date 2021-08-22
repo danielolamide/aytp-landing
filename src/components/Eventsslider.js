@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Slide } from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 import { API_BASE_URL } from '../config';
 import 'react-slideshow-image/dist/styles.css';
 
 
 const EVENTS_URL = `${API_BASE_URL}/events`
-export default function EventsSlideShow() {
+export function EventsSlideShow() {
   const [titles, setTitles] = useState([])
   useEffect(() => {
     fetch(EVENTS_URL)
@@ -18,13 +18,13 @@ export default function EventsSlideShow() {
   return (
     <div className="slide-container h-full">
 
-	<Slide>
+	<Fade>
          {titles.map((value, index) => {
           return <div className="each-slide">
 			<EventsTemplate  key={index} name={value.id} title={value.Name} url={value.Url} description={value.Description} />
 		  </div>
           })}
-	</Slide>
+	</Fade>
     </div>
   )
 }

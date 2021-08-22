@@ -4,7 +4,7 @@ import { API_BASE_URL } from "../config";
 import "react-slideshow-image/dist/styles.css";
 
 const PUBLICATIONS_URL = `${API_BASE_URL}/publications`;
-export default function PublicationsSlider() {
+export function PublicationsSlider() {
   const [titles, setPublications] = useState([]);
   useEffect(() => {
     fetch(PUBLICATIONS_URL)
@@ -15,7 +15,14 @@ export default function PublicationsSlider() {
       });
   }, []);
   return (
-    <div className="slide-container h-full">
+    <div className="slide-container h-full bg-white">
+        <h3 className="w-full my-2 text-1xl font-bold leading-tight text-center text-gray-800">
+          Publications
+        </h3>
+
+        <div className="w-full mb-4">
+          <div className="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 bg-black "></div>
+        </div>
       <Slide>
         {titles.map((value, index) => {
           return (
