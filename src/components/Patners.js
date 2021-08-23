@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { API_BASE_URL } from "../config";
+import {Slide } from 'react-slideshow-image';
 import "react-slideshow-image/dist/styles.css";
 
 const PATNERS_URL = `${API_BASE_URL}/patners`;
@@ -13,52 +14,23 @@ export function PatnersSection() {
         setPatners(d);
       });
   }, []);
-  let outerStyle = {
-    "box-sizing": "border-box",
-    "align-content": "center",
-    display: "flex",
-    flex: "0 0 100%",
-    "justify-content": "space-evenly",
-    "list-style": "none",
-  };
-  let gridStyle = {
-    "list-style": "none",
-    "box-sizing": "border-box",
-    "flex-wrap": "wrap",
-    "max-width": "100.75rem",
-    "flex-direction": "row",
-    "justify-content": "space-around",
-    display: "flex",
-    margin: "1.5rem auto 3.75rem",
-    padding: "0",
-    width: " 100%",
-    gap: "1rem 1.9rem",
-    "grid-template-columns ": "repeat(2, minmax(0, 50%))",
-  };
-  let partnerStlye = {
-    " list-style": "none",
-    " box-sizing": "border-box",
-    " align-items": "center",
-    " display": "flex",
-    " flex": " 0 1 50%",
-    " justify-content": "center",
-    " position": "relative",
-  };
+
   return (
     <>
-      <h1 className="bg-white w-full text-4xl font-bold pt-10 underline leading-tight text-center text-gray-800">
+      <h1 className="bg-white w-full text-3xl font-bold pt-10 underline leading-tight text-center text-gray-800">
         Our Patners
       </h1>
       <div
-        className="slide-container bg-white text-black h-full "
-        style={outerStyle}
+        className="bg-white w-full text-black h-full"
       >
-        <ul style={gridStyle}>
+
+      <br />
+        <Slide>
           {patners.map((value, index) => {
             let url = `${API_BASE_URL}${value.PartnerLogo.url}`;
             return (
               <>
-                <li className="each-slide" style={partnerStlye}>
+                <div className="each-slide">
                   <PartnerCard
                     key={index}
                     id={value.id}
@@ -66,11 +38,11 @@ export function PatnersSection() {
                     url={value.PartnerURL}
                     logo={url}
                   />
-                </li>
+                </div>
               </>
             );
           })}
-        </ul>
+        </Slide>
       </div>
     </>
   );
@@ -84,10 +56,9 @@ function PartnerCard(props) {
   }
 
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleClick} className="flex-col items-center">
       <img
-        height="100%"
-        width="100%"
+      className="object-scale-down w-full h-28"
         src={props.logo}
         alt={props.name}
       />
