@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { EventsSlideShow } from "./components/Eventsslider";
 import {PublicationsSlider} from "./components/Publications";
-import { PatnersSection } from "./components/Patners";
+import { PartnersSection } from "./components/Partners";
 
 function App() {
 	return (
@@ -17,7 +17,7 @@ function App() {
 			<About />
 			<People />
 			<Pricing />
-			<PatnersSection />
+			<PartnersSection />
 			<EventsSlideShow/> 
 			<PublicationsSlider />
 			<Contact />

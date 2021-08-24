@@ -16,13 +16,10 @@ export function PublicationsSlider() {
   }, []);
   return (
     <div className="slide-container h-full bg-white">
-        <h3 className="w-full my-2 text-1xl font-bold leading-tight text-center text-gray-800">
-          Publications
-        </h3>
+      <h3 className="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+        Publications
+      </h3>
 
-        <div className="w-full mb-4">
-          <div className="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 bg-black "></div>
-        </div>
       <Slide>
         {titles.map((value, index) => {
           return (
@@ -45,7 +42,7 @@ export function PublicationsSlider() {
 function PublicationTemplate(props) {
   function handleClick(e) {
     e.preventDefault();
-	let downloadURL = `${API_BASE_URL}${props.url}`
+    let downloadURL = `${API_BASE_URL}${props.url}`;
     window.open(downloadURL, "_blank");
     console.log("The link was clicked.");
   }

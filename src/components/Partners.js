@@ -1,32 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { API_BASE_URL } from "../config";
-import {Slide } from 'react-slideshow-image';
+import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-const PATNERS_URL = `${API_BASE_URL}/patners`;
-export function PatnersSection() {
-  const [patners, setPatners] = useState([]);
+const PARTNERS_URL = `${API_BASE_URL}/patners`;
+export function PartnersSection() {
+  const [partners, setPartners] = useState([]);
   useEffect(() => {
-    fetch(PATNERS_URL)
+    fetch(PARTNERS_URL)
       .then((response) => response.json())
       .then((d) => {
         console.log(d);
-        setPatners(d);
+        setPartners(d);
       });
   }, []);
 
   return (
     <>
-      <h1 className="bg-white w-full text-3xl font-bold pt-10 underline leading-tight text-center text-gray-800">
-        Our Patners
+      <h1 className="bg-white w-full text-3xl font-bold pt-10 leading-tight text-center text-gray-800">
+        Our Partners
       </h1>
-      <div
-        className="bg-white w-full text-black h-full"
-      >
-
-      <br />
+      <div className="bg-white w-full text-black h-full">
+        <br />
         <Slide>
-          {patners.map((value, index) => {
+          {partners.map((value, index) => {
             let url = `${API_BASE_URL}${value.PartnerLogo.url}`;
             return (
               <>
@@ -58,7 +55,7 @@ function PartnerCard(props) {
   return (
     <div onClick={handleClick} className="flex-col items-center">
       <img
-      className="object-scale-down w-full h-28"
+        className="object-scale-down w-full h-28"
         src={props.logo}
         alt={props.name}
       />
